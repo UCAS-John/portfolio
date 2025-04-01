@@ -1,17 +1,12 @@
-# Personal-Finance-Program
+# Personal Portfolio
 
-## Project Desc
+## Project Description
 
-This project aims to make financing a little bit easier, by converting currencies, tracking expenses and income, and setting goals! It allows you to generate statistics and graphs all about your account and stores the information for later use, so you can stop running the program any time you please.
-
-## Installation
-
-NOT USED FOR CLASS.  
+This project showcase 6 of my proudest projects I had done. This will include documentation fo each project, and also the program in action.
 
 ## Execution and Usage
 
 This program is driven by Tkinter and uses menus outside of the terminal to run, boxes should only allow certain inputs, just enter what it is requesting.
-![image](**relative path here**) Note, image has to be in repository.  
 
 ## Used Technology
 
@@ -35,10 +30,6 @@ This program is driven by Tkinter and uses menus outside of the terminal to run,
 
 + Editing and making budgets
 
-## Contributions
-
-NOT USED FOR CLASS
-
 ## Contributers
 
 + Github Copilot, helped fix issues with Tkinter, and gave some ideas on how to improve
@@ -55,11 +46,3 @@ Vincent Johnson is an asipring python developer and is currently in highschool. 
 
 Short paragraph about author (EACH member of the group has one)
 Includes contact information
-
-## Change log
-
-NOT USED FOR CLASS
-
-## License
-
-NOT USED FOR CLASS
