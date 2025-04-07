@@ -1,94 +1,107 @@
+import tkinter as tk
+from tkinter import messagebox
 import os
+import subprocess
 
-def display_intro():
-    print("Welcome to My Programming Portfolio!")
-    print("This portfolio showcases the programming projects I am most proud of.")
-    print("Use the menu below to explore the projects and learn more about them.\n")
-
-def display_menu():
-    print("Menu:")
-    print("1. Project 1: Calculator")
-    print("2. Project 2: Weather App")
-    print("3. Project 3: To-Do List")
-    print("4. Project 4: Chatbot")
-    print("5. Project 5: Game (Tic-Tac-Toe)")
-    print("6. Project 6: Data Visualizer")
-    print("7. Exit")
-    print()
-
-def display_project_details(project_number):
-    project_details = {
-        1: {
-            "name": "Calculator",
-            "description": "A simple calculator that performs basic arithmetic operations.",
-            "process": "I enjoyed implementing the logic for different operations.",
-            "learning": "I learned about handling user input and error checking.",
-            "role": "Individual project"
+# Function to display project details
+def show_project_details(project):
+    details = {
+        "Project 1": {
+            "description": "This project is a calculator app that performs basic arithmetic operations.",
+            "process": "I enjoyed building the logic for calculations and designing the UI.",
+            "learning": "I learned about event-driven programming and GUI design.",
+            "role": "Individual project."
         },
-        2: {
-            "name": "Weather App",
-            "description": "An app that fetches and displays weather data for a given location.",
+        "Project 2": {
+            "description": "This project is a weather app that fetches real-time weather data.",
             "process": "It was challenging to work with APIs but rewarding.",
-            "learning": "I learned how to use APIs and parse JSON data.",
-            "role": "Individual project"
+            "learning": "I learned how to use REST APIs and handle JSON data.",
+            "role": "Individual project."
         },
-        3: {
-            "name": "To-Do List",
-            "description": "A simple app to manage daily tasks.",
-            "process": "I enjoyed designing the user interface.",
-            "learning": "I learned about file handling and persistence.",
-            "role": "Individual project"
+        "Project 3": {
+            "description": "This project is a to-do list app with persistent storage.",
+            "process": "I enjoyed implementing the database integration.",
+            "learning": "I learned about CRUD operations and file handling.",
+            "role": "Individual project."
         },
-        4: {
-            "name": "Chatbot",
-            "description": "A chatbot that can answer basic questions.",
-            "process": "It was fun to implement natural language processing.",
-            "learning": "I learned about string manipulation and basic AI concepts.",
-            "role": "Individual project"
+        "Project 4": {
+            "description": "This project is a simple game built with Python.",
+            "process": "It was fun to design the game mechanics.",
+            "learning": "I learned about game loops and collision detection.",
+            "role": "Individual project."
         },
-        5: {
-            "name": "Game (Tic-Tac-Toe)",
-            "description": "A two-player Tic-Tac-Toe game.",
-            "process": "I enjoyed implementing the game logic.",
-            "learning": "I learned about game loops and condition checking.",
-            "role": "Individual project"
+        "Project 5": {
+            "description": "This project is a portfolio website built with Flask.",
+            "process": "I enjoyed working on the backend and routing.",
+            "learning": "I learned about web frameworks and templating.",
+            "role": "Individual project."
         },
-        6: {
-            "name": "Data Visualizer",
-            "description": "A tool to visualize data using charts and graphs.",
-            "process": "It was exciting to work with data visualization libraries.",
-            "learning": "I learned about matplotlib and data analysis.",
-            "role": "Individual project"
+        "Project 6": {
+            "description": "This project is a chatbot using natural language processing.",
+            "process": "It was exciting to work with AI and machine learning.",
+            "learning": "I learned about NLP libraries and chatbot design.",
+            "role": "Individual project."
         }
     }
+    project_info = details.get(project, {})
+    if project_info:
+        messagebox.showinfo(
+            project,
+            f"Description: {project_info['description']}\n"
+            f"Process: {project_info['process']}\n"
+            f"Learning: {project_info['learning']}\n"
+            f"Role: {project_info['role']}"
+        )
 
-    details = project_details.get(project_number)
-    if details:
-        print(f"Project: {details['name']}")
-        print(f"Description: {details['description']}")
-        print(f"Programming Process: {details['process']}")
-        print(f"Learning Experience: {details['learning']}")
-        print(f"Role: {details['role']}")
-        print()
+# Function to run the selected project
+def run_project(project):
+    project_scripts = {
+        "Project 1": "projects/calculator.py",
+        "Project 2": "projects/weather_app.py",
+        "Project 3": "projects/todo_list.py",
+        "Project 4": "projects/game.py",
+        "Project 5": "projects/portfolio_website.py",
+        "Project 6": "projects/chatbot.py"
+    }
+    script_path = project_scripts.get(project)
+    if script_path and os.path.exists(script_path):
+        subprocess.run(["python", script_path])
     else:
-        print("Invalid project number.\n")
+        messagebox.showerror("Error", f"Script for {project} not found!")
 
+# Main application
 def main():
-    display_intro()
-    while True:
-        display_menu()
-        choice = input("Enter the number of the project you want to view (or 7 to exit): ")
-        if choice.isdigit():
-            choice = int(choice)
-            if choice == 7:
-                print("Thank you for exploring my portfolio!")
-                break
-            elif 1 <= choice <= 6:
-                display_project_details(choice)
-            else:
-                print("Invalid choice. Please select a valid option.\n")
-        else:
-            print("Please enter a number.\n")
+    root = tk.Tk()
+    root.title("Personal Portfolio")
+
+    # Introduction
+    intro_label = tk.Label(
+        root,
+        text="Welcome to My Programming Portfolio!\n\n"
+             "This portfolio showcases the programming projects I'm most proud of.\n"
+             "Select a project from the menu to learn more or run it.",
+        justify="center",
+        padx=10,
+        pady=10
+    )
+    intro_label.pack()
+
+    # Menu
+    menu_label = tk.Label(root, text="Projects Menu", font=("Arial", 14, "bold"))
+    menu_label.pack(pady=10)
+
+    projects = ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5", "Project 6"]
+    for project in projects:
+        frame = tk.Frame(root)
+        frame.pack(pady=5)
+
+        details_button = tk.Button(frame, text=f"Details: {project}", command=lambda p=project: show_project_details(p))
+        details_button.pack(side="left", padx=5)
+
+        run_button = tk.Button(frame, text=f"Run: {project}", command=lambda p=project: run_project(p))
+        run_button.pack(side="left", padx=5)
+
+    root.mainloop()
 
 if __name__ == "__main__":
     main()

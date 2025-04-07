@@ -16,12 +16,12 @@ Input boxes are designed to accept only valid inputs. Simply provide the request
 ## Menu
 
 The menu includes six projects, each accessible via a numbered list or clickable buttons:
-1. Project 1: [Project Name]
-2. Project 2: [Project Name]
-3. Project 3: [Project Name]
-4. Project 4: [Project Name]
-5. Project 5: [Project Name]
-6. Project 6: [Project Name]
+1. Project 1: Coin Change
+2. Project 2: Movie Recommender
+3. Project 3: Personal Library
+4. Project 4: Random Password Generator
+5. Project 5: Todo List
+6. Project 6: Word Count
 
 ## Project Descriptions
 
