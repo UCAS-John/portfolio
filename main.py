@@ -56,12 +56,12 @@ def show_project_details(project):
 # Function to run the selected project
 def run_project(project):
     project_scripts = {
-        "Coin Change": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "coin_change.py"),
-        "Movie Recommender": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "movie_recommender.py"),
-        "Personal Library": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "personal_library.py"),
-        "Random Password Generator": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "random_password_generator.py"),
-        "Todo List": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "todo_list.py"),
-        "Word Count": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "word_count.py")
+        "Coin Change": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "coin_change", "main.py"),
+        "Movie Recommender": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "movie_recommender", "main.py"),
+        "Personal Library": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "personal_library", "main.py"),
+        "Random Password Generator": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "random_password_generator", "main.py"),
+        "Todo List": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "todo_list", "main.py"),
+        "Word Count": os.path.join(os.path.dirname(os.path.abspath(__file__)), "projects", "word_count ", "main.py")
     }
     script_path = project_scripts.get(project)
     if script_path and os.path.exists(script_path):
