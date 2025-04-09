@@ -7,7 +7,10 @@ This portfolio showcases six of my proudest programming projects. It serves as a
 ## How to Use
 
 This program is driven by Tkinter and features a menu interface. To use it:
-1. Launch the program using run button or type `python main.py`.
+1. Launch the program using run button or type command in portfolio directory 
+```sh
+python main.py
+```
 2. Navigate through the menu to select a project.
 3. Follow the prompts to view project details or run the program.
 
@@ -40,8 +43,14 @@ This program uses Tkinter to create a graphical user interface (GUI) that operat
 ## Used Technology
 
 The following libraries are required to run the program:
-- `pandas`: Install with `pip install pandas`
-- `matplotlib`: Install with `pip install matplotlib`
+- `pandas`: Install with 
+```sh 
+pip install pandas
+```
+- `matplotlib`: Install with
+```sh 
+pip install matplotlib
+```
 
 ## Current Features
 
