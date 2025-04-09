@@ -8,39 +8,33 @@ def show_project_details(project):
     details = {
         "Coin Change": {
             "description": "A program that calculates the minimum number of coins needed to make a given amount.",
-            "process": "I enjoyed building the logic for calculations and designing the UI.",
-            "learning": "I learned about event-driven programming and GUI design.",
-            "role": "Individual project."
+            "process": "I found the process enjoyable when trying to solve the coin problems.",
+            "learning": "I learned how to implement GUI using python library tkinter",
         },
         "Movie Recommender": {
-            "description": "A system that recommends movies based on user preferences or ratings.",
-            "process": "It was challenging to work with APIs but rewarding.",
-            "learning": "I learned how to use REST APIs and handle JSON data.",
-            "role": "Individual project."
+            "description": "A program that recommends movies based on user filters.",
+            "process": "It was challenging trying to figure out how to filter movies correctly.",
+            "learning": "I learned lis t comeprehension and how to work with CSV files.",
         },
         "Personal Library": {
-            "description": "An application to manage a collection of books, including adding, removing, and searching for books.",
-            "process": "I enjoyed implementing the database integration.",
-            "learning": "I learned about CRUD operations and file handling.",
-            "role": "Individual project."
+            "description": "A program to manage a collection of books, including adding, removing, and searching for books.",
+            "process": "I enjoy dealing with large dictioanry.",
+            "learning": "I learned how to deal with python dictionary effectively",
         },
         "Random Password Generator": {
-            "description": "A tool to generate secure, random passwords based on user-defined criteria.",
-            "process": "It was fun to design the password generation logic.",
-            "learning": "I learned about randomization and string manipulation.",
-            "role": "Individual project."
+            "description": "A program to generate secure, random passwords based on user-defined criteria.",
+            "process": "It was fun to generate password base on user criteria.",
+            "learning": "I learned how to use random library and string module.",
         },
         "Todo List": {
-            "description": "An application to manage tasks, allowing users to add, edit, and delete tasks with persistent storage.",
-            "process": "I enjoyed working on the backend and routing.",
-            "learning": "I learned about web frameworks and templating.",
-            "role": "Individual project."
+            "description": "A program to manage todo list, allowing users to add, edit, and delete todo.",
+            "process": "I enjoyed making Todo list as a class and trying to come up with a way to use txt file as a todo list.",
+            "learning": "I learned how to deal with txt file.",
         },
         "Word Count": {
             "description": "A program that counts the number of words, characters, and lines in a given text.",
-            "process": "It was exciting to work on text processing algorithms.",
-            "learning": "I learned about string manipulation and file handling.",
-            "role": "Individual project."
+            "process": "It was fun to divide the program into multiple pages. I think it more organized and easier to deal with.",
+            "learning": "I learned about how to use time module and count words.",
         }
     }
     project_info = details.get(project, {})
