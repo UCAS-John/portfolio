@@ -2,16 +2,17 @@
 
 ## Introduction
 
-This portfolio showcases six of my proudest programming projects. It serves as a programming resume, highlighting my skills and accomplishments. Each project includes documentation, a description of its functionality, and a demonstration of the program in action.
+This portfolio showcases six of my proudest programming projects. It serves as a programming resume.
 
 ## How to Use
 
-This program is driven by Tkinter and features an intuitive menu interface. To use it:
-1. Launch the program.
+This program is driven by Tkinter and features a menu interface. To use it:
+1. Launch the program using run button or type `python main.py`.
 2. Navigate through the menu to select a project.
 3. Follow the prompts to view project details or run the program.
 
 Input boxes are designed to accept only valid inputs. Simply provide the requested information.
+NOTE: Some programs is run on terminal instead of GUI like TKinter.
 
 ## Menu
 
@@ -29,40 +30,32 @@ For each project, the following details are provided:
 - **What the project does**: A brief explanation of the project's functionality.
 - **Programming process**: Insights into the development process.
 - **What I learned**: Key takeaways and skills gained.
-- **My role**: If it was a group project, my specific contributions.
 
-This information is displayed before the code runs.
+This information is displayed by click the description button before running the project code.
 
 ## Execution and Usage
 
-This program uses Tkinter to create a graphical user interface (GUI) that operates outside the terminal. The menu system allows users to navigate between projects seamlessly.
+This program uses Tkinter to create a graphical user interface (GUI) that operates outside the terminal. Beaware that some project do run in terminal. 
 
 ## Used Technology
 
 The following libraries are required to run the program:
-- `csv`: Install with `pip install csv`
 - `pandas`: Install with `pip install pandas`
 - `matplotlib`: Install with `pip install matplotlib`
-- `os`: Install with `pip install os`
 
 ## Current Features
 
-- Intuitive windowed menu
-- Accurate data tracking
-- Budget creation and editing tools
+- windowed menu
+- 6 projects inside
 
 ## Contributors
 
-- **GitHub Copilot**: Assisted with fixing Tkinter issues and provided improvement ideas.
-- **Tkinter Documentation**: Helped in designing the program's user interface.
-- **[Contributor Name]**: [Description of their contribution].
-- **[Contributor Name]**: [Description of their contribution].
+- **GitHub Copilot**: Assisted with fixing Tkinter issues, provided improvement ideas and some code auto completion.
 
 ## Author's Information
 
-Vincent Johnson is an aspiring Python developer currently in high school. He has created numerous projects for school and actively participates in the cybersecurity community. Mentored by his father and uncle, both professionals in the cybersecurity industry, Vincent has experience in Java but primarily focuses on Python development.
+John is a UCAS student currently in grade 10. Now studing Computer science with Ms.LaRose
 
 Contact Information:
-- Email: [Your Email Address]
-- GitHub: [Your GitHub Profile Link]
-- LinkedIn: [Your LinkedIn Profile Link]
+- Email: john.wangwang@ucas-edu.net
+- GitHub: [UCAS-John](https://github.com/UCAS-John)

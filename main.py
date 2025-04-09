@@ -41,9 +41,9 @@ def show_project_details(project):
     if project_info:
         messagebox.showinfo(
             project,
-            f"Description: {project_info['description']}\n"
-            f"Process: {project_info['process']}\n"
-            f"Learning: {project_info['learning']}\n"
+            f"Description: {project_info['description']}\n\n"
+            f"Process: {project_info['process']}\n\n"
+            f"Learning: {project_info['learning']}\n\n"
         )
 
 # Function to run the selected project
