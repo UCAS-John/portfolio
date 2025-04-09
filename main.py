@@ -44,7 +44,6 @@ def show_project_details(project):
             f"Description: {project_info['description']}\n"
             f"Process: {project_info['process']}\n"
             f"Learning: {project_info['learning']}\n"
-            f"Role: {project_info['role']}"
         )
 
 # Function to run the selected project
